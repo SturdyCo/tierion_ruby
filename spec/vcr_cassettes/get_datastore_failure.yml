@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/datastores
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '321'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=a3790972431d25e749144c27923944791564afa576f1b82102b659a29e52111b;Path=/;Domain=api.tierion.com
+      Date:
+      - Wed, 02 Dec 2015 18:26:42 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":305,"key":"-kcKbjj0OkKGjitNu3TmXA","name":"Transactions","groupName":"","redirectEnabled":false,"redirectUrl":null,"emailNotificationEnabled":true,"emailNotificationAddress":"me@garrettqmartin.com","postDataEnabled":false,"postDataUrl":null,"postReceiptEnabled":false,"postReceiptUrl":null,"timestamp":1448991629}]'
+    http_version: 
+  recorded_at: Wed, 02 Dec 2015 18:26:43 GMT
+recorded_with: VCR 3.0.0

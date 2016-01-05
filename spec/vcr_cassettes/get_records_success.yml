@@ -1,0 +1,411 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.tierion.com/v1/datastores
+    body:
+      encoding: UTF-8
+      string: '{"name":"Transactions"}'
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '93'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=17a9e6405a1bc2e88d51c2f747205fe5d9839756b5ce4f4cc6838bc472066725;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 20:52:17 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":"You cannot exceed the maximum number of datastores allowed
+        for your current plan."}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 20:52:18 GMT
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/datastores
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '659'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=17a9e6405a1bc2e88d51c2f747205fe5d9839756b5ce4f4cc6838bc472066725;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 20:52:17 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":305,"key":"-kcKbjj0OkKGjitNu3TmXA","name":"Transactions1","groupName":"","redirectEnabled":false,"redirectUrl":null,"emailNotificationEnabled":true,"emailNotificationAddress":"me@garrettqmartin.com","postDataEnabled":false,"postDataUrl":null,"postReceiptEnabled":false,"postReceiptUrl":"http://42e222ee.ngrok.com/new_receipt","timestamp":1448991629},{"id":320,"key":"3jwDzKLJFkOBGdNYDHeWlw","name":"Transactions","groupName":"","redirectEnabled":false,"redirectUrl":null,"emailNotificationEnabled":false,"emailNotificationAddress":null,"postDataEnabled":false,"postDataUrl":null,"postReceiptEnabled":false,"postReceiptUrl":null,"timestamp":1450385044}]'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 20:52:18 GMT
+- request:
+    method: post
+    uri: https://api.tierion.com/v1/records
+    body:
+      encoding: UTF-8
+      string: '{"datastoreId":320,"amount":100,"user_id":123}'
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '272'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=17a9e6405a1bc2e88d51c2f747205fe5d9839756b5ce4f4cc6838bc472066725;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 20:52:18 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"SZJqg04eL0-PZWiEt6VaLQ","accountId":923,"datastoreId":320,"status":"queued","data":{"amount":"100","user_id":"123"},"json":"{\"amount\":\"100\",\"user_id\":\"123\"}","sha256":"362be626be08462cc820a0528b01120c39323887a5655aa7e7d3bc4fe0d4f0b4","timestamp":1450385539}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 20:52:18 GMT
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/datastores
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '659'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=9b83aa97d499ad5a9f8e5af758d328b380e557d8398be1c2f9dca5b94d73de11;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 20:52:18 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":305,"key":"-kcKbjj0OkKGjitNu3TmXA","name":"Transactions1","groupName":"","redirectEnabled":false,"redirectUrl":null,"emailNotificationEnabled":true,"emailNotificationAddress":"me@garrettqmartin.com","postDataEnabled":false,"postDataUrl":null,"postReceiptEnabled":false,"postReceiptUrl":"http://42e222ee.ngrok.com/new_receipt","timestamp":1448991629},{"id":320,"key":"3jwDzKLJFkOBGdNYDHeWlw","name":"Transactions","groupName":"","redirectEnabled":false,"redirectUrl":null,"emailNotificationEnabled":false,"emailNotificationAddress":null,"postDataEnabled":false,"postDataUrl":null,"postReceiptEnabled":false,"postReceiptUrl":null,"timestamp":1450385044}]'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 20:52:19 GMT
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/records
+    body:
+      encoding: UTF-8
+      string: '{"datastoreId":320}'
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '48'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=17a9e6405a1bc2e88d51c2f747205fe5d9839756b5ce4f4cc6838bc472066725;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 20:52:21 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":"Parameter ''datastoreId'' is required."}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 20:52:21 GMT
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/records
+    body:
+      encoding: UTF-8
+      string: '{"datastoreId":320}'
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '48'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=17a9e6405a1bc2e88d51c2f747205fe5d9839756b5ce4f4cc6838bc472066725;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 21:02:09 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":"Parameter ''datastoreId'' is required."}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 21:02:10 GMT
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/records
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '48'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=9b83aa97d499ad5a9f8e5af758d328b380e557d8398be1c2f9dca5b94d73de11;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 21:02:49 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":"Parameter ''datastoreId'' is required."}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 21:02:49 GMT
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/records?%7B%22datastoreId%22:320%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '48'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=9b83aa97d499ad5a9f8e5af758d328b380e557d8398be1c2f9dca5b94d73de11;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 21:04:13 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":"Parameter ''datastoreId'' is required."}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 21:04:13 GMT
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/records
+    body:
+      encoding: UTF-8
+      string: '{"datastoreId":320}'
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '48'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=9b83aa97d499ad5a9f8e5af758d328b380e557d8398be1c2f9dca5b94d73de11;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 21:06:23 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":"Parameter ''datastoreId'' is required."}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 21:06:23 GMT
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/records?datastoreId=320
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '585'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=9b83aa97d499ad5a9f8e5af758d328b380e557d8398be1c2f9dca5b94d73de11;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 21:06:45 GMT
+    body:
+      encoding: UTF-8
+      string: '{"accountId":923,"datastoreId":320,"page":1,"pageCount":1,"pageSize":100,"recordCount":5,"startDate":1450385044,"endDate":1450386406,"records":[{"id":"SZJqg04eL0-PZWiEt6VaLQ","label":"SZJqg04eL0-PZWiEt6VaLQ","timestamp":1450385539},{"id":"JljBoISbWUKHXves_yXuQg","label":"JljBoISbWUKHXves_yXuQg","timestamp":1450385506},{"id":"M6wc9h1Pq06j6WM0WNmTQA","label":"M6wc9h1Pq06j6WM0WNmTQA","timestamp":1450385410},{"id":"etdI4JWd2EmdeRB_BjBeEA","label":"etdI4JWd2EmdeRB_BjBeEA","timestamp":1450385322},{"id":"MOIUBcoD706EI_otTYxdIA","label":"MOIUBcoD706EI_otTYxdIA","timestamp":1450385045}]}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 21:06:46 GMT
+- request:
+    method: get
+    uri: https://api.tierion.com/v1/records?datastoreId=320
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '585'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=17a9e6405a1bc2e88d51c2f747205fe5d9839756b5ce4f4cc6838bc472066725;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 21:06:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"accountId":923,"datastoreId":320,"page":1,"pageCount":1,"pageSize":100,"recordCount":5,"startDate":1450385044,"endDate":1450386413,"records":[{"id":"SZJqg04eL0-PZWiEt6VaLQ","label":"SZJqg04eL0-PZWiEt6VaLQ","timestamp":1450385539},{"id":"JljBoISbWUKHXves_yXuQg","label":"JljBoISbWUKHXves_yXuQg","timestamp":1450385506},{"id":"M6wc9h1Pq06j6WM0WNmTQA","label":"M6wc9h1Pq06j6WM0WNmTQA","timestamp":1450385410},{"id":"etdI4JWd2EmdeRB_BjBeEA","label":"etdI4JWd2EmdeRB_BjBeEA","timestamp":1450385322},{"id":"MOIUBcoD706EI_otTYxdIA","label":"MOIUBcoD706EI_otTYxdIA","timestamp":1450385045}]}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 21:06:53 GMT
+recorded_with: VCR 3.0.0

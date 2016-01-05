@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.tierion.com/v1/datastores
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '37'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ARRAffinity=17a9e6405a1bc2e88d51c2f747205fe5d9839756b5ce4f4cc6838bc472066725;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 19:34:24 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":"Name is a required field."}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 19:34:24 GMT
+recorded_with: VCR 3.0.0

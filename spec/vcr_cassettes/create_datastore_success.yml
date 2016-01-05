@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.tierion.com/v1/datastores
+    body:
+      encoding: UTF-8
+      string: '{"name":"Transactions"}'
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '301'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.tierion.com/v1/Datastores/316
+      Set-Cookie:
+      - ARRAffinity=17a9e6405a1bc2e88d51c2f747205fe5d9839756b5ce4f4cc6838bc472066725;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 19:21:25 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":316,"key":"kDWB9dExZE23Azsvws5sDg","name":"Transactions","groupName":"","redirectEnabled":false,"redirectUrl":null,"emailNotificationEnabled":false,"emailNotificationAddress":null,"postDataEnabled":false,"postDataUrl":null,"postReceiptEnabled":false,"postReceiptUrl":null,"timestamp":1450380086}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 19:21:25 GMT
+- request:
+    method: post
+    uri: https://api.tierion.com/v1/datastores
+    body:
+      encoding: UTF-8
+      string: '{"name":"Transactions"}'
+    headers:
+      X-Username:
+      - me@garrettqmartin.com
+      X-Api-Key:
+      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '301'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.tierion.com/v1/Datastores/317
+      Set-Cookie:
+      - ARRAffinity=17a9e6405a1bc2e88d51c2f747205fe5d9839756b5ce4f4cc6838bc472066725;Path=/;Domain=api.tierion.com
+      Date:
+      - Thu, 17 Dec 2015 19:24:12 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":317,"key":"ILUF0tKmL0K-waVLgXDYXw","name":"Transactions","groupName":"","redirectEnabled":false,"redirectUrl":null,"emailNotificationEnabled":false,"emailNotificationAddress":null,"postDataEnabled":false,"postDataUrl":null,"postReceiptEnabled":false,"postReceiptUrl":null,"timestamp":1450380253}'
+    http_version: 
+  recorded_at: Thu, 17 Dec 2015 19:24:12 GMT
+recorded_with: VCR 3.0.0
