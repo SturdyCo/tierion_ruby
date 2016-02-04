@@ -1,7 +1,7 @@
-require 'rails_helper'
+require 'spec_helper'
 
 describe Tierion do
-  let(:tierion) { Tierion.new }
+  let(:tierion) { Tierion.new(model: AccountTransaction) }
 
   describe '#get_datastore' do
     context 'all' do
@@ -86,7 +86,7 @@ describe Tierion do
   end
 
   describe '#create_record' do
-    let(:account_transaction) { create(:account_transaction) }
+    let(:account_transaction) { AccountTransaction.new(tierion_record_id: 'abc123') }
 
     context 'success' do
       it 'should return true' do
@@ -108,7 +108,7 @@ describe Tierion do
 
   describe '#get_records' do
     context 'success' do
-      let(:account_transaction) { create(:account_transaction) }
+      let(:account_transaction) { AccountTransaction.new(tierion_record_id: 'abc123') }
 
       it 'should return a collection of records' do
         params = {
@@ -128,10 +128,7 @@ describe Tierion do
   end
 
   describe '#update_blockchain_receipt' do
-    let(:account_transaction) {
-      create(:account_transaction,
-             tierion_record_id: "123abc")
-    }
+    let(:account_transaction) { AccountTransaction.new(tierion_record_id: 'abc123') }
 
     it 'should update the account transaction with the receipt' do
       webhook_params = {
@@ -140,7 +137,6 @@ describe Tierion do
       }
 
       tierion.update_blockchain_receipt(webhook_params)
-
       expect(account_transaction.reload.blockchain_receipt).to eq(webhook_params[:blockchain_receipt])
     end
   end

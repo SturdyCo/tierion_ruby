@@ -1,8 +1,11 @@
+require 'httparty'
+
 class Tierion
   include HTTParty
   base_uri 'https://api.tierion.com/v1'
 
-  def initialize
+  def initialize(model:)
+    @model = model
     @headers = {
       'X-Username' => ENV['TIERION_USERNAME'],
       'X-Api-Key' => ENV['TIERION_API_KEY'],
@@ -90,7 +93,7 @@ class Tierion
   end
 
   def update_blockchain_receipt(params)
-    account_transaction = AccountTransaction.find_by(tierion_record_id: params[:tierion_record_id])
-    account_transaction.update(blockchain_receipt: params[:blockchain_receipt])
+    model_instance = @model.find_by(tierion_record_id: params[:tierion_record_id])
+    model_instance.update(blockchain_receipt: params[:blockchain_receipt])
   end
 end
