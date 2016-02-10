@@ -3,6 +3,21 @@ require 'spec_helper'
 describe Tierion do
   let(:tierion) { Tierion.new(model: AccountTransaction) }
 
+  before do
+    Tierion.configure do |config|
+      config.username = 'garrettqmartin'
+      config.api_key = 'ABC123'
+    end
+  end
+
+  describe '.configure' do
+
+    it 'should set the username and api_key' do
+      expect(Tierion.configuration.username).to eq('garrettqmartin')
+      expect(Tierion.configuration.api_key).to eq('ABC123')
+    end
+  end
+
   describe '#get_datastore' do
     context 'all' do
       it 'should return the datastore' do

@@ -4,15 +4,28 @@ class Tierion
   include HTTParty
   base_uri 'https://api.tierion.com/v1'
 
+  class << self
+    attr_accessor :configuration
+  end
+
   def initialize(model:)
     @model = model
     @headers = {
-      'X-Username' => ENV['TIERION_USERNAME'],
-      'X-Api-Key' => ENV['TIERION_API_KEY'],
+      'X-Username' => self.class.configuration.username,
+      'X-Api-Key' => self.class.configuration.api_key,
       'Content-Type' => 'application/json'
     }
   end
 
+  class Configuration
+    attr_accessor :username
+    attr_accessor :api_key
+  end
+
+  def self.configure
+    self.configuration = @configuration || Configuration.new
+    yield(configuration)
+  end
 
   def get_datastore(name: nil)
     response = self.class.get('/datastores', headers: @headers)
@@ -48,7 +61,7 @@ class Tierion
 
     response = self.class.put("/datastores/#{id}",
                               body: body,
-                              headers: @headers)
+                                headers: @headers)
 
     if response.code == 200
       true
