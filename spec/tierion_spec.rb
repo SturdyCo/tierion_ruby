@@ -137,7 +137,7 @@ describe Tierion do
       }
 
       tierion.update_blockchain_receipt(webhook_params)
-      expect(account_transaction.reload.blockchain_receipt).to eq(webhook_params[:blockchain_receipt])
+      expect(account_transaction.blockchain_receipt).to eq(webhook_params[:blockchain_receipt])
     end
   end
 end

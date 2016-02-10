@@ -17,10 +17,10 @@ class Tierion
   def get_datastore(name: nil)
     response = self.class.get('/datastores', headers: @headers)
 
-    if name.present?
+    unless name.nil?
       datastore = response.find { |datastore| datastore['name'] == name }
 
-      if datastore.blank?
+      if datastore.nil?
         raise ArgumentError, 'No datastore by that name. Check your spelling.'
       end
 

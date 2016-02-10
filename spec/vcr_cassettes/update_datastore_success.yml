@@ -9,8 +9,6 @@ http_interactions:
     headers:
       X-Username:
       - me@garrettqmartin.com
-      X-Api-Key:
-      - baWu6yg5MUL4vA4uRZbmM7mHo1OGc0UtzJbrv2AJvf4=
       Content-Type:
       - application/json
   response:

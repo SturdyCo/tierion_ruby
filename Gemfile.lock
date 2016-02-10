@@ -8,15 +8,22 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.8)
+    coderay (1.1.0)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
+    dotenv (2.0.2)
     hashdiff (0.2.3)
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     json (1.8.3)
+    method_source (0.8.2)
     multi_xml (0.5.5)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -31,6 +38,7 @@ GEM
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
     safe_yaml (1.0.4)
+    slop (3.6.0)
     vcr (3.0.0)
     webmock (1.22.3)
       addressable (>= 2.3.6)
@@ -41,6 +49,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv
+  pry
   rspec
   tierion!
   vcr
