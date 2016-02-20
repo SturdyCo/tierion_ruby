@@ -8,15 +8,6 @@ class Tierion
     attr_accessor :configuration
   end
 
-  def initialize(model:)
-    @model = model
-    @headers = {
-      'X-Username' => self.class.configuration.username,
-      'X-Api-Key' => self.class.configuration.api_key,
-      'Content-Type' => 'application/json'
-    }
-  end
-
   class Configuration
     attr_accessor :username
     attr_accessor :api_key
@@ -26,6 +17,16 @@ class Tierion
     self.configuration = @configuration || Configuration.new
     yield(configuration)
   end
+
+  def initialize(model:)
+    @model = model
+    @headers = {
+      'X-Username' => self.class.configuration.username,
+      'X-Api-Key' => self.class.configuration.api_key,
+      'Content-Type' => 'application/json'
+    }
+  end
+
 
   def get_datastore(name: nil)
     response = self.class.get('/datastores', headers: @headers)
@@ -107,6 +108,9 @@ class Tierion
 
   def update_blockchain_receipt(params)
     model_instance = @model.find_by(tierion_record_id: params[:tierion_record_id])
+
+    return unless model_instance
+
     model_instance.update(blockchain_receipt: params[:blockchain_receipt])
   end
 end

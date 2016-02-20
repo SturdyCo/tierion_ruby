@@ -11,7 +11,6 @@ describe Tierion do
   end
 
   describe '.configure' do
-
     it 'should set the username and api_key' do
       expect(Tierion.configuration.username).to eq('garrettqmartin')
       expect(Tierion.configuration.api_key).to eq('ABC123')
